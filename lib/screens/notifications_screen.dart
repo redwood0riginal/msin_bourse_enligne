@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class NewsScreen extends StatelessWidget {
-  const NewsScreen({super.key});
+class NotificationsScreen extends StatelessWidget {
+  const NotificationsScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +20,7 @@ class NewsScreen extends StatelessWidget {
           onPressed: () => Navigator.pop(context),
         ),
         title: Text(
-          'Actualités',
+          'Notifications',
           style: TextStyle(
             color: isDarkMode ? Colors.white : const Color(0xFF0A0E21),
             fontSize: 20,
@@ -34,7 +34,7 @@ class NewsScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Icon(
-              Icons.article_outlined,
+              Icons.notifications_outlined,
               size: 80,
               color: isDarkMode
                   ? Colors.white.withOpacity(0.3)
@@ -42,7 +42,7 @@ class NewsScreen extends StatelessWidget {
             ),
             const SizedBox(height: 24),
             Text(
-              'Aucune actualité',
+              'Aucune notification',
               style: TextStyle(
                 color: isDarkMode ? Colors.white : const Color(0xFF0A0E21),
                 fontSize: 24,
@@ -51,7 +51,7 @@ class NewsScreen extends StatelessWidget {
             ),
             const SizedBox(height: 8),
             Text(
-              'Les actualités seront affichées ici',
+              'Vous n\'avez pas de nouvelles notifications',
               style: TextStyle(
                 color: isDarkMode
                     ? Colors.white.withOpacity(0.5)
