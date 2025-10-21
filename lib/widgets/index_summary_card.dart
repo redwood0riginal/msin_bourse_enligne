@@ -8,6 +8,11 @@ class IndexSummaryCard extends StatelessWidget {
 
   const IndexSummaryCard({super.key, required this.index});
 
+  double _calculateChangePercent(double? current, double? previous) {
+    if (current == null || previous == null || previous == 0) return 0;
+    return ((current - previous) / previous) * 100;
+  }
+
   @override
   Widget build(BuildContext context) {
     final isDarkMode = Theme.of(context).brightness == Brightness.dark;
@@ -53,7 +58,7 @@ class IndexSummaryCard extends StatelessWidget {
                     borderRadius: BorderRadius.circular(8),
                   ),
                   child: Text(
-                    index.name,
+                    index.symbol ?? 'N/A',
                     style: const TextStyle(
                       color: AppColors.primary,
                       fontSize: 14,
@@ -73,7 +78,7 @@ class IndexSummaryCard extends StatelessWidget {
             ),
             const SizedBox(height: 16),
             Text(
-              Formatters.formatNumber(index.value),
+              Formatters.formatNumber(index.price ?? 0),
               style: TextStyle(
                 color:
                     isDarkMode
@@ -109,7 +114,7 @@ class IndexSummaryCard extends StatelessWidget {
                       ),
                       const SizedBox(width: 4),
                       Text(
-                        Formatters.formatNumber(index.change.abs()),
+                        Formatters.formatNumber((index.variation ?? 0).abs()),
                         style: TextStyle(
                           color:
                               isPositive ? AppColors.success : AppColors.error,
@@ -122,7 +127,7 @@ class IndexSummaryCard extends StatelessWidget {
                 ),
                 const SizedBox(width: 8),
                 Text(
-                  Formatters.formatPercent(index.changePercent),
+                  Formatters.formatPercent(_calculateChangePercent(index.price, index.lastClosingPrice)),
                   style: TextStyle(
                     color: isPositive ? AppColors.success : AppColors.error,
                     fontSize: 15,

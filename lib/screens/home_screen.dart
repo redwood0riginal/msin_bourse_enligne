@@ -38,12 +38,17 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   void _loadData() {
-    // Sample data - Replace with actual API calls
     _marketSummary = MarketSummary(
-      globalVolume: 2450000000,
-      marketCapitalization: 685000000000,
-      volumeChange: 5.2,
-      capChange: 1.8,
+      secId: 'MARKET_GLOBAL',
+      marketPlace: 'CSE',
+      symbol: 'GLOBAL',
+      name: 'Marché Global',
+      volume: 2450000000,
+      tov: 2450000000,
+      variation: 5.2,
+      price: 685000000000,
+      lastClosingPrice: 675000000000,
+      dateUpdate: DateTime.now(),
     );
 
     _portfolioSummary = PortfolioSummary(
@@ -54,19 +59,27 @@ class _HomeScreenState extends State<HomeScreen> {
     );
 
     _masiIndex = MarketIndexSummary(
-      name: 'MASI',
-      value: 13542.67,
-      change: 125.34,
-      changePercent: 0.93,
-      lastUpdate: '16:00',
+      symbol: 'MASI',
+      price: 13542.67,
+      variation: 125.34,
+      openingPrice: 13417.33,
+      closingPrice: 13542.67,
+      lastClosingPrice: 13417.33,
+      higherPrice: 13560.00,
+      lowerPrice: 13400.00,
+      datePrice: DateTime.now(),
     );
 
     _masi20Index = MarketIndexSummary(
-      name: 'MASI 20',
-      value: 1098.45,
-      change: 8.76,
-      changePercent: 0.80,
-      lastUpdate: '16:00',
+      symbol: 'MASI20',
+      price: 1098.45,
+      variation: 8.76,
+      openingPrice: 1089.69,
+      closingPrice: 1098.45,
+      lastClosingPrice: 1089.69,
+      higherPrice: 1100.00,
+      lowerPrice: 1085.00,
+      datePrice: DateTime.now(),
     );
 
     _hausses = [

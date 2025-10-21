@@ -11,6 +11,11 @@ class MarketSummaryCard extends StatelessWidget {
     required this.summary,
   });
 
+  double _calculateChangePercent(double? current, double? previous) {
+    if (current == null || previous == null || previous == 0) return 0;
+    return ((current - previous) / previous) * 100;
+  }
+
   @override
   Widget build(BuildContext context) {
     final isDarkMode = Theme.of(context).brightness == Brightness.dark;
@@ -68,14 +73,14 @@ class MarketSummaryCard extends StatelessWidget {
             const SizedBox(height: 8),
             _buildMetricRow(
               'Volume Global',
-              Formatters.formatCompactCurrency(summary.globalVolume),
-              summary.volumeChange,
+              Formatters.formatCompactCurrency(summary.volume ?? 0),
+              summary.variation ?? 0,
             ),
             const SizedBox(height: 6),
             _buildMetricRow(
               'Capitalisation',
-              Formatters.formatCompactCurrency(summary.marketCapitalization),
-              summary.capChange,
+              Formatters.formatCompactCurrency(summary.price ?? 0),
+              _calculateChangePercent(summary.price, summary.lastClosingPrice),
             ),
           ],
         ),
