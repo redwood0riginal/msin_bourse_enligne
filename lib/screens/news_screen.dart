@@ -278,7 +278,7 @@ class _NewsScreenState extends State<NewsScreen> with SingleTickerProviderStateM
     }
 
     return ListView.separated(
-      padding: const EdgeInsets.all(16),
+      padding: const EdgeInsets.all(8),
       itemCount: items.length,
       separatorBuilder: (context, index) => const SizedBox(height: 12),
       itemBuilder: (context, index) {

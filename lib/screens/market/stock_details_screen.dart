@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import '../../models/market_summary.dart';
-import '../../utils/formatters.dart';
 import '../../config/theme.dart';
 
 class StockDetailsScreen extends StatefulWidget {

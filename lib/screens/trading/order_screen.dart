@@ -230,7 +230,7 @@ class _OrderScreenState extends State<OrderScreen> {
         children: [
           Expanded(
             child: SingleChildScrollView(
-              padding: const EdgeInsets.all(16),
+              padding: const EdgeInsets.all(8),
               child: Column(
                 children: [
                   _buildCompactInstrumentHeader(isDarkMode),

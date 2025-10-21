@@ -8,6 +8,7 @@ import '../widgets/portfolio_summary_card.dart';
 import '../widgets/index_summary_card.dart';
 import '../widgets/palmares_widget.dart';
 import '../widgets/quick_news_widget.dart';
+import '../widgets/masi_intraday_chart.dart';
 import '../config/theme.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -211,7 +212,8 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
     ];
 
-    _newsHeadline = 'La Bourse de Casablanca clôture en hausse, le MASI gagne 0,93%';
+    _newsHeadline =
+        'La Bourse de Casablanca clôture en hausse, le MASI gagne 0,93%';
     _newsTime = 'Il y a 2h';
   }
 
@@ -237,66 +239,74 @@ class _HomeScreenState extends State<HomeScreen> {
       color: AppColors.primary,
       child: SingleChildScrollView(
         physics: const AlwaysScrollableScrollPhysics(),
-        padding: const EdgeInsets.all(16),
+        //padding: const EdgeInsets.all(8),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             // Quick News
-            QuickNewsWidget(
-              headline: _newsHeadline,
-              time: _newsTime,
-              onTap: () {
-                // Navigate to news detail or news screen
-              },
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: QuickNewsWidget(
+                headline: _newsHeadline,
+                time: _newsTime,
+                onTap: () {
+                  // Navigate to news detail or news screen
+                },
+              ),
             ),
-            const SizedBox(height: 16),
+            const SizedBox(height: 8),
 
             // Market and Portfolio Cards - Horizontal Scroll
-            SizedBox(
-              height: 160,
-              child: ListView(
-                scrollDirection: Axis.horizontal,
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: SizedBox(
+                height: 160,
+                child: ListView(
+                  scrollDirection: Axis.horizontal,
+                  children: [
+                    SizedBox(
+                      width: MediaQuery.of(context).size.width * 0.85,
+                      child: MarketSummaryCard(summary: _marketSummary),
+                    ),
+                    const SizedBox(width: 16),
+                    SizedBox(
+                      width: MediaQuery.of(context).size.width * 0.85,
+                      child: PortfolioSummaryCard(summary: _portfolioSummary),
+                    ),
+                    const SizedBox(width: 16),
+                  ],
+                ),
+              ),
+            ),
+            const SizedBox(height: 8),
+
+            // Index Cards Row
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
                 children: [
-                  SizedBox(
-                    width: MediaQuery.of(context).size.width * 0.85,
-                    child: MarketSummaryCard(summary: _marketSummary),
-                  ),
+                  Expanded(child: IndexSummaryCard(index: _masiIndex)),
                   const SizedBox(width: 16),
-                  SizedBox(
-                    width: MediaQuery.of(context).size.width * 0.85,
-                    child: PortfolioSummaryCard(summary: _portfolioSummary),
-                  ),
-                  const SizedBox(width: 16),
+                  Expanded(child: IndexSummaryCard(index: _masi20Index)),
                 ],
               ),
             ),
-            const SizedBox(height: 16),
-
-            // Index Cards Row
-            Row(
-              children: [
-                Expanded(
-                  child: IndexSummaryCard(index: _masiIndex),
-                ),
-                const SizedBox(width: 16),
-                Expanded(
-                  child: IndexSummaryCard(index: _masi20Index),
-                ),
-              ],
-            ),
-            const SizedBox(height: 16),
+            const SizedBox(height: 8),
 
             // MASI Intraday Chart
-
-            // const SizedBox(height: 16),
+            const MasiIntradayChart(),
+            const SizedBox(height: 8),
 
             // Palmares Widget
-            PalmaresWidget(
-              hausses: _hausses,
-              baisses: _baisses,
-              volumes: _volumes,
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: PalmaresWidget(
+                hausses: _hausses,
+                baisses: _baisses,
+                volumes: _volumes,
+              ),
             ),
-            const SizedBox(height: 16),
+            const SizedBox(height: 8),
           ],
         ),
       ),

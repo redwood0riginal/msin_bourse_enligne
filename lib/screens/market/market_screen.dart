@@ -237,7 +237,7 @@ class _MarketScreenState extends State<MarketScreen> {
           children: [
             // Search and Filter Section
             Container(
-              padding: const EdgeInsets.all(16),
+              padding: const EdgeInsets.all(8),
               decoration: BoxDecoration(
                 color: isDarkMode ? AppColors.cardDark : AppColors.cardLight,
                 boxShadow: [
@@ -477,7 +477,7 @@ class _MarketScreenState extends State<MarketScreen> {
                         ),
                       )
                       : ListView.separated(
-                        padding: const EdgeInsets.all(16),
+                        padding: const EdgeInsets.all(8),
                         itemCount: _filteredInstruments.length,
                         separatorBuilder:
                             (context, index) => const SizedBox(height: 12),
