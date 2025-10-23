@@ -33,18 +33,17 @@ class _StockDetailsScreenState extends State<StockDetailsScreen> {
           ),
           onPressed: () => Navigator.pop(context),
         ),
-        title:
-            Text(
-              widget.instrument.symbol ?? 'N/A',
-              style: TextStyle(
-                color:
-                    isDarkMode
-                        ? AppColors.textPrimaryDark
-                        : AppColors.textPrimaryLight,
-                fontSize: 18,
-                fontWeight: FontWeight.w700,
-              ),
-            ),
+        title: Text(
+          widget.instrument.symbol ?? 'N/A',
+          style: TextStyle(
+            color:
+                isDarkMode
+                    ? AppColors.textPrimaryDark
+                    : AppColors.textPrimaryLight,
+            fontSize: 18,
+            fontWeight: FontWeight.w700,
+          ),
+        ),
       ),
       body: Center(
         child: Column(

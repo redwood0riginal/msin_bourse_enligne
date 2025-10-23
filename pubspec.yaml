@@ -38,6 +38,7 @@ dependencies:
   intl: ^0.19.0
   fl_chart: ^0.69.0
   syncfusion_flutter_charts:
+  highcharts_flutter: ^1.1.1
 
 dev_dependencies:
   flutter_test:
