@@ -6,6 +6,7 @@ class MarketOrderBook {
   final String? side;
   final double? quantity;
   final double? price;
+  final int? orderCount;
   final DateTime? dateOrder;
   final String? orderMarketId;
   final String? orderType;
@@ -20,6 +21,7 @@ class MarketOrderBook {
     this.side,
     this.quantity,
     this.price,
+    this.orderCount,
     this.dateOrder,
     this.orderMarketId,
     this.orderType,
@@ -38,6 +40,7 @@ class MarketOrderBook {
           ? (json['quantity'] as num).toDouble()
           : null,
       price: json['price'] != null ? (json['price'] as num).toDouble() : null,
+      orderCount: json['orderCount'] != null ? json['orderCount'] as int : null,
       dateOrder: json['dateOrder'] != null
           ? DateTime.parse(json['dateOrder'])
           : null,
@@ -58,6 +61,7 @@ class MarketOrderBook {
       'side': side,
       'quantity': quantity,
       'price': price,
+      'orderCount': orderCount,
       'dateOrder': dateOrder?.toIso8601String(),
       'orderMarketId': orderMarketId,
       'orderType': orderType,
@@ -74,6 +78,7 @@ class MarketOrderBook {
     String? side,
     double? quantity,
     double? price,
+    int? orderCount,
     DateTime? dateOrder,
     String? orderMarketId,
     String? orderType,
@@ -88,6 +93,7 @@ class MarketOrderBook {
       side: side ?? this.side,
       quantity: quantity ?? this.quantity,
       price: price ?? this.price,
+      orderCount: orderCount ?? this.orderCount,
       dateOrder: dateOrder ?? this.dateOrder,
       orderMarketId: orderMarketId ?? this.orderMarketId,
       orderType: orderType ?? this.orderType,

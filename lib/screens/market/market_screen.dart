@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import '../../models/market_summary.dart';
 import '../../utils/formatters.dart';
 import '../../config/theme.dart';
-import 'stock_details_screen.dart';
+import '../stock_detail_screen.dart';
 import '../trading/order_screen.dart';
 
 class MarketScreen extends StatefulWidget {
@@ -39,7 +39,7 @@ class _MarketScreenState extends State<MarketScreen> {
   void _loadInstruments() {
     _instruments = [
       MarketSummary(
-        secId: 'ATW',
+        secId: 'MA0000025622',
         symbol: 'ATW',
         name: 'Attijariwafa Bank',
         marketPlace: 'CSE',
@@ -54,7 +54,7 @@ class _MarketScreenState extends State<MarketScreen> {
         dateUpdate: DateTime.now(),
       ),
       MarketSummary(
-        secId: 'IAM',
+        secId: 'MA0000051385',
         symbol: 'IAM',
         name: 'Maroc Telecom',
         marketPlace: 'CSE',
@@ -69,7 +69,7 @@ class _MarketScreenState extends State<MarketScreen> {
         dateUpdate: DateTime.now(),
       ),
       MarketSummary(
-        secId: 'BCP',
+        secId: 'MA0000064582',
         symbol: 'BCP',
         name: 'Banque Centrale Populaire',
         marketPlace: 'CSE',
@@ -84,7 +84,7 @@ class _MarketScreenState extends State<MarketScreen> {
         dateUpdate: DateTime.now(),
       ),
       MarketSummary(
-        secId: 'LAB',
+        secId: 'MA0000014582',
         symbol: 'LAB',
         name: 'Label Vie',
         marketPlace: 'CSE',
@@ -99,7 +99,7 @@ class _MarketScreenState extends State<MarketScreen> {
         dateUpdate: DateTime.now(),
       ),
       MarketSummary(
-        secId: 'CIH',
+        secId: 'MA0000036254',
         symbol: 'CIH',
         name: 'CIH Bank',
         marketPlace: 'CSE',
@@ -114,7 +114,7 @@ class _MarketScreenState extends State<MarketScreen> {
         dateUpdate: DateTime.now(),
       ),
       MarketSummary(
-        secId: 'MNG',
+        secId: 'MA0000095824',
         symbol: 'MNG',
         name: 'Managem',
         marketPlace: 'CSE',
@@ -129,7 +129,7 @@ class _MarketScreenState extends State<MarketScreen> {
         dateUpdate: DateTime.now(),
       ),
       MarketSummary(
-        secId: 'SID',
+        secId: 'MA0000012455',
         symbol: 'SID',
         name: 'Sidérurgie',
         marketPlace: 'CSE',
@@ -144,7 +144,7 @@ class _MarketScreenState extends State<MarketScreen> {
         dateUpdate: DateTime.now(),
       ),
       MarketSummary(
-        secId: 'ADH',
+        secId: 'MA0000036524',
         symbol: 'ADH',
         name: 'Douja Prom Addoha',
         marketPlace: 'CSE',
@@ -528,7 +528,10 @@ class _MarketScreenState extends State<MarketScreen> {
                 context,
                 MaterialPageRoute(
                   builder:
-                      (context) => StockDetailsScreen(instrument: instrument),
+                      (context) => StockDetailScreen(
+                        symbol: instrument.symbol ?? '',
+                        summary: instrument,
+                      ),
                 ),
               );
             },
