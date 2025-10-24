@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import '../../models/market_summary.dart';
 import '../../utils/formatters.dart';
 import '../../config/theme.dart';
-import '../stock_detail_screen.dart';
+import 'stock_detail_screen.dart';
 import '../trading/order_screen.dart';
 
 class MarketScreen extends StatefulWidget {

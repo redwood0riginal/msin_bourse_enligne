@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 import 'package:intl/intl.dart' as intl;
 import 'dart:math' as math;
-import '../config/theme.dart';
+import '../../config/theme.dart';
 
 class MasiIntradayChart extends StatefulWidget {
   const MasiIntradayChart({super.key});

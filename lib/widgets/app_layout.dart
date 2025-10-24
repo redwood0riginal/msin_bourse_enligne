@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import '../screens/menu_screen.dart';
-import '../screens/news_screen.dart';
-import '../screens/notifications_screen.dart';
+import '../screens/profile/menu_screen.dart';
+import '../screens/news/news_screen.dart';
+import '../screens/notifications/notifications_screen.dart';
 
 class AppLayout extends StatelessWidget {
   final Widget body;

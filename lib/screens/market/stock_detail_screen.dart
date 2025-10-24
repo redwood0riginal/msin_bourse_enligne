@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:msin_bourse_enligne/screens/trading/order_screen.dart';
-import '../models/market_instrument.dart';
-import '../models/market_summary.dart';
-import '../models/orderbook.dart';
-import '../models/transaction.dart';
-import '../config/theme.dart';
-import '../widgets/stock_price_chart.dart';
+import '../../models/market_instrument.dart';
+import '../../models/market_summary.dart';
+import '../../models/orderbook.dart';
+import '../../models/transaction.dart';
+import '../../config/theme.dart';
+import '../../widgets/charts/stock_price_chart.dart';
 
 class StockDetailScreen extends StatefulWidget {
   final String symbol;

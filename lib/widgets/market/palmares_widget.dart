@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import '../models/stock_item.dart';
-import '../utils/formatters.dart';
-import '../config/theme.dart';
+import '../../models/stock_item.dart';
+import '../../utils/formatters.dart';
+import '../../config/theme.dart';
 
 class PalmaresWidget extends StatefulWidget {
   final List<StockItem> hausses;

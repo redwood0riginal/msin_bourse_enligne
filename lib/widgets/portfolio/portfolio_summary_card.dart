@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import '../models/portfolio_summary.dart';
-import '../utils/formatters.dart';
-import '../config/theme.dart';
+import '../../models/portfolio_summary.dart';
+import '../../utils/formatters.dart';
+import '../../config/theme.dart';
 
 class PortfolioSummaryCard extends StatelessWidget {
   final PortfolioSummary summary;

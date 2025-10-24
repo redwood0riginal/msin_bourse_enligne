@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import '../config/theme.dart';
-import '../models/portfolio_data.dart';
-import '../models/portfolio_account.dart';
-import '../models/portfolio_position.dart';
-import '../widgets/portfolio_summary_cards.dart';
-import '../widgets/portfolio_pie_chart.dart';
-import '../widgets/position_card.dart';
+import '../../config/theme.dart';
+import '../../models/portfolio_data.dart';
+import '../../models/portfolio_account.dart';
+import '../../models/portfolio_position.dart';
+import '../../widgets/portfolio/portfolio_summary_cards.dart';
+import '../../widgets/portfolio/portfolio_pie_chart.dart';
+import '../../widgets/portfolio/position_card.dart';
 
 class PortfolioScreen extends StatefulWidget {
   const PortfolioScreen({super.key});

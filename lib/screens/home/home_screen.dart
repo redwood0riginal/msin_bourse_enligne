@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
-import '../models/market_summary.dart';
-import '../models/portfolio_summary.dart';
-import '../models/market_index_summary.dart';
-import '../models/stock_item.dart';
-import '../widgets/market_summary_card.dart';
-import '../widgets/portfolio_summary_card.dart';
-import '../widgets/index_summary_card.dart';
-import '../widgets/palmares_widget.dart';
-import '../widgets/quick_news_widget.dart';
-import '../widgets/masi_intraday_chart.dart';
-import '../config/theme.dart';
+import '../../models/market_summary.dart';
+import '../../models/portfolio_summary.dart';
+import '../../models/market_index_summary.dart';
+import '../../models/stock_item.dart';
+import '../../widgets/market/market_summary_card.dart';
+import '../../widgets/portfolio/portfolio_summary_card.dart';
+import '../../widgets/market/index_summary_card.dart';
+import '../../widgets/market/palmares_widget.dart';
+import '../../widgets/common/quick_news_widget.dart';
+import '../../widgets/market/masi_intraday_chart.dart';
+import '../../config/theme.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});

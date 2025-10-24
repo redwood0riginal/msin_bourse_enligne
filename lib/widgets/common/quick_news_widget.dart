@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../config/theme.dart';
+import '../../config/theme.dart';
 
 class QuickNewsWidget extends StatelessWidget {
   final String headline;

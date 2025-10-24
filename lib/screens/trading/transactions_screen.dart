@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:msin_bourse_enligne/widgets/trading/index.dart';
 import '../../config/theme.dart';
 import '../../models/user_transaction.dart';
-import '../../widgets/transaction_card.dart';
 
 class TransactionsScreen extends StatefulWidget {
   const TransactionsScreen({super.key});

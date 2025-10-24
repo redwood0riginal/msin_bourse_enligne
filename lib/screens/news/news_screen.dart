@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../config/theme.dart';
-import '../models/news.dart';
+import '../../config/theme.dart';
+import '../../models/news.dart';
 
 class NewsScreen extends StatefulWidget {
   const NewsScreen({super.key});

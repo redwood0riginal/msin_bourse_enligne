@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import '../utils/formatters.dart';
-import '../config/theme.dart';
-import '../models/portfolio_position.dart';
+import '../../utils/formatters.dart';
+import '../../config/theme.dart';
+import '../../models/portfolio_position.dart';
 
 class PositionCard extends StatelessWidget {
   final PortfolioPosition position;

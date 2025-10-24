@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import '../models/market_summary.dart';
-import '../utils/formatters.dart';
-import '../config/theme.dart';
+import '../../models/market_summary.dart';
+import '../../utils/formatters.dart';
+import '../../config/theme.dart';
 
 class MarketSummaryCard extends StatelessWidget {
   final MarketSummary summary;

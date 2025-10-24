@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import '../widgets/app_layout.dart';
-import 'home_screen.dart';
+import 'home/home_screen.dart';
 import 'market/market_screen.dart';
-import 'portfolio_screen.dart';
+import 'portfolio/portfolio_screen.dart';
 import 'trading/transactions_screen.dart';
 
 class MainNavigationScreen extends StatefulWidget {
